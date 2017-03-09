@@ -22,8 +22,8 @@ The last step is to partition the sorted merged array M into two equivalent size
 # 2-3 Main Function
 Here I defined all of my data and data array with size of N. In addition, I used clock function to take time.
 # 3- Parallel Implementation of Merge Sort Algorithm
-- Single Instruction Multiple Data
- I have the same tasks and different data, so it is a good idea to use single instruction multiple parallel implementation.
+Single Instruction Multiple Data.
+I have the same tasks and different data, so it is a good idea to use single instruction multiple parallel implementation.
 # 3-1 Partitioning the Data equally
 At first I partition the data equally into processors, but sometimes data cannot be equally dividable by processors. In order to have equal local data in each processor, I add one to local n, the quotient of the number of data (n) divided by the number of processors. And I have some new elements so I should assign them into zero. In order to calculate the number of new elements I subtract the local n from r, the remainder of the dividing the number of data by the number of processors. Afterwards, I generate the elements of data randomly. In order to generate some three-digit numbers I use the remainder of dividing random numbers by 1000.
 # 3-2 Sorting the Data
